@@ -21,13 +21,21 @@ repositories {
     mavenCentral()
     maven { url 'http://packages.confluent.io/maven/' }
 }
+ext {
+    jacksonVersion = '2.9.9'
+    kafkaVersion = '2.2.0'
+    log4jVersion = '2.11.2'
+    mockitoJunitVersion = '2.27.0'
+    junitVersion = '5.4.2'
+}
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:27.0.1-jre'
 
     // Use JUnit test framework
-    testImplementation 'junit:junit:+'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 
 
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.2'
