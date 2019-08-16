@@ -1,4 +1,3 @@
 package greenTea.katie;
 
-public class HelloWorld {
-}
+public class HelloWorld {}

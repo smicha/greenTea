@@ -1,4 +1,3 @@
 package greenTea.smicha;
 
-public class HelloWorld {
-}
+public class HelloWorld {}
